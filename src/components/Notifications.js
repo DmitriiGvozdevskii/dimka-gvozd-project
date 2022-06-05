@@ -21,6 +21,7 @@ export const Notifications = observer(() => {
     axios.delete(`http://localhost:8000/notifications/${id}`).then((resp) => {
       console.log(resp.data)
       alert('Удалили')
+      window.location.reload()
     })
   }
 
@@ -66,6 +67,7 @@ export const Notifications = observer(() => {
                   }).then(resp => {
                     alert('Обновили')
                     console.log(resp.data)
+                    window.location.reload()
                   })
                   if (title.length > 0) {
                     card.title = title

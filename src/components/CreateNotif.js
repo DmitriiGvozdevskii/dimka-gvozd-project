@@ -22,6 +22,7 @@ export const CreateNotification = () => {
         return alert
       }
       alert('Уведомление создано')
+      window.location.reload()
     })
   }
 
