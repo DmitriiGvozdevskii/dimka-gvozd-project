@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+.Main {
+    width: 100%;
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Header {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.InnerHeader {
+    width: 1140px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.HeaderTitle {
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    /* flex-direction: row; */
 }
 
-.App-link {
-  color: #61dafb;
+.HeaderBlock {
+    padding: 5px 7px;
+    margin: 3px;
+
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MainBlock {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.InnerMainBlock {
+    margin: auto;
+
+    width: 1140px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MainInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.MainInputBlock h5 {
+    margin: 5px 0;
+}
+
+.NotificationContainer {
+    width: 1140px;
+    margin: auto;
+
+    margin-top: 30px;
+
+    /* height: 100%; */
+
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+}
+
+.NotificationCard {
+    width: 240px;
+    height: 240px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    border-radius: 25px;
+
+    margin-right: 15px;
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    transition: 0.15s all;
+}
+
+.NotificationCard:hover {
+    transform: scale(1.05);
+    /* border-width: 5px; */
+}
+
+.NotificationCard h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.NotificationsButton {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NotificationButton {
+    padding: 10px 17px;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    font-weight: bold;
+
+    position: relative;
+
+    z-index: 2;
+}
+.warning {
+    position: relative;
+
+    overflow: hidden;
+    transition: 0.3s all;
+}
+
+.NotificationButton:hover {
+    color: black;
+}
+
+.NotificationBackgroundButton {
+    width: 100%;
+    height: 100%;
+
+    background: #ff9200;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+
+    transition: 0.3s all;
+}
+
+.NotificationButton:hover .NotificationBackgroundButton {
+    top: 0;
+}
+
+.NotificationButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button:active {
+    top: 2px;
+}
+
+.NotificationAlert {
+    width: 400px;
+    height: 150px;
+
+    border-radius: 25px;
+
+    border: 1px solid #ff9200;
+    padding: 10px 17px;
+
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
