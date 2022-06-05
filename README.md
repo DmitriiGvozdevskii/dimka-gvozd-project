@@ -1,5 +1,5 @@
 # Установка моего проекта:
-
+STACK:REACT, MOBX, EXPRESS(BACKEND)
 ## Фронт
 
 ```
